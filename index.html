@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moto Torque</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;800&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/2eec30ba97.js" crossorigin="anonymous" defer></script>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">Moto Torque <i class="fa-solid fa-fire-flame-curved"></i></div>
+
+    <!-- accessible hamburger button with 3 spans -->
+    <button id="hamburger" class="hamburger" aria-expanded="false" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="nav-menu" class="nav-menu" aria-hidden="true">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Service</a></li>
+        <li><a href="#sales">Bike for Sale</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <h1>Your Bike, Our Passion</h1>
+          <p>Top-notch servicing and premium bike sales to keep you riding in style.</p>
+          <a class="btn" href="#services">Explore Services</a>
+        </div>
+
+        <figure class="hero-image">
+          <img src="./images/236-2369290_bmw-bike-png-hd.png" alt="Bike preview" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- services -->
+    <section class="services" id="services">
+      <h2>Our Services</h2>
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-media">
+            <img src="./images/THE EPIC BIKE BUILD GOES TO GLORY _ THE GIRL WITH….jpeg" alt="Full Bike Service">
+          </div>
+          <div class="service-body">
+            <h3>Full Bike Service</h3>
+            <p>Keep your ride in top shape with our expert maintenance packages.</p>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-media">
+            <img src="./images/engine.jpeg" alt="Engine Repair">
+          </div>
+          <div class="service-body">
+            <h3>Engine Repair</h3>
+            <p>Certified mechanics for all major bike engines and brands.</p>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-media">
+            <img src="./images/image.png" alt="Custom Modifications">
+          </div>
+          <div class="service-body">
+            <h3>Custom Modifications</h3>
+            <p>Stand out with performance and aesthetic upgrades.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- sales -->
+    <section class="sales" id="sales">
+      <h2>Premium Bikes for Sale</h2>
+      <div class="bike-grid">
+        <figure class="bike-card">
+          <img src="./images/r15.jpeg" alt="Yamaha R15 V4">
+          <figcaption>
+            <h4>Yamaha R15 V4</h4>
+            <p>₹1,79,000 | 155cc | 2023</p>
+          </figcaption>
+        </figure>
+
+        <figure class="bike-card">
+          <img src="./images/benelli.jpeg" alt="Benelli 300">
+          <figcaption>
+            <h4>Benelli 300</h4>
+            <p>₹1,99,000 | 300cc | 2023</p>
+          </figcaption>
+        </figure>
+
+        <figure class="bike-card">
+          <img src="./images/re.jpeg" alt="Royal Enfield Classic 350">
+          <figcaption>
+            <h4>Royal Enfield Classic 350</h4>
+            <p>₹1,93,000 | 349cc | 2024</p>
+          </figcaption>
+        </figure>
+
+        <figure class="bike-card">
+          <img src="./images/ktm.jpeg" alt="KTM RC 390">
+          <figcaption>
+            <h4>KTM RC 390</h4>
+            <p>₹3,16,000 | 373cc | 2023</p>
+          </figcaption>
+        </figure>
+
+        <figure class="bike-card">
+          <img src="./images/ns200.jpeg" alt="NS 200">
+          <figcaption>
+            <h4>NS 200</h4>
+            <p>₹1,16,000 | 200cc | 2020</p>
+          </figcaption>
+        </figure>
+
+        <figure class="bike-card">
+          <img src="./images/g310.jpeg" alt="BMW G 310">
+          <figcaption>
+            <h4>BMW G 310</h4>
+            <p>₹3,66,000 | 307cc | 2025</p>
+          </figcaption>
+        </figure>
+
+        <figure class="bike-card">
+          <img src="./images/rr310.jpeg" alt="Apache RR 310">
+          <figcaption>
+            <h4>Apache RR 310</h4>
+            <p>₹2,50,000 | 309cc | 2022</p>
+          </figcaption>
+        </figure>
+
+        <figure class="bike-card">
+          <img src="./images/mt15.jpeg" alt="MT 15">
+          <figcaption>
+            <h4>MT 15</h4>
+            <p>₹1,20,000 | 147cc | 2025</p>
+          </figcaption>
+        </figure>
+
+        <figure class="bike-card">
+          <img src="./images/harley.jpeg" alt="Harley Davidson">
+          <figcaption>
+            <h4>Harley Davidson</h4>
+            <p>₹5,16,000 | 450cc | 2012</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- about -->
+    <section class="aboutpg" id="about">
+      <!-- <video autoplay loop muted playsinline class="background-video"> -->
+        <!-- <source src="Untitled video - Made with Clipchamp.mp4" type="video/mp4" /> -->
+      <!-- </video> -->
+
+      <div class="about-inner">
+        <h2>Wheel <img src="./images/wheels.png" alt="wheels" height="25px" width="25px">f Trust</h2>
+        <div class="abt-con">
+          <div class="abt-box">
+            <h3>About Moto Torque</h3>
+            <p>At Moto Torque, we don't just service bikes — we elevate performance. With over a decade of hands-on experience,
+              our expert mechanics are passionate about keeping your ride in peak condition. Whether it's a basic tune-up or
+              a full-scale custom build, we treat every machine like a masterpiece.</p>
+          </div>
+
+          <div class="abt-box">
+            <h3>Why Riders Trust Us</h3>
+            <p>We believe in speed, safety, and satisfaction. Our state-of-the-art garage is equipped with modern tools, genuine
+              parts, and a love for two-wheelers that shows in every job we do. Ride in, and feel the Thunder.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- reviews -->
+    <section class="review">
+      <h2>What Our Riders Say</h2>
+      <div class="review-list">
+        <blockquote class="review-card">
+          <p>"Best service center in town. My bike feels brand new every time!"</p>
+          <cite>- Aneesh K.M.</cite>
+        </blockquote>
+        <blockquote class="review-card">
+          <p>"Bought my R15 here, and the experience was just premium."</p>
+          <cite>- Ashik A.</cite>
+        </blockquote>
+        <blockquote class="review-card">
+          <p>"Just visit nothing bought, and the experience was so good."</p>
+          <cite>- Rinshad B.</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section class="logincontainer" id="contact">
+      <div class="contact-box-left">
+        <h1 class="title">Get in Touch</h1>
+        <p class="subtitle">We'd love to hear from you. Schedule a service or ask a question.</p>
+        <p>Stay updated with offers, events, and riding tips</p><br>
+        <h4>Our Location</h4>
+        <address>
+          <p>Moto Torque Bike Service Center</p>
+          <p>No. vr-46, Race Road, Bike Street</p>
+          <p>Coimbatore – 641008, Tamil Nadu, India</p>
+        </address><br>
+
+        <h4>Call Us</h4>
+        <p>Customer Support: +91 88383 32337</p>
+        <p>Service Booking: +91 95850 24805</p>
+        <p>General Inquiries: info@thunderwheels.in</p><br>
+
+        <h4>Working Hours</h4>
+        <p>Monday to Saturday: 9:00 AM – 8:00 PM</p>
+        <p>Sunday: 10:00 AM – 2:00 PM</p>
+      </div>
+
+      <div class="vertical-line" aria-hidden="true"></div>
+
+      <div class="contact-box-right">
+        <div class="contact-container">
+          <div class="r-card" tabindex="0">
+            <div class="card-front">
+              <h2>Contact Us</h2>
+            </div>
+
+            <div class="card-back">
+              <h2>Get in Touch</h2>
+              <form>
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email" required />
+                <textarea rows="3" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Fazil K. All rights reserved.</p>
+      <p>Email: contact@riderevmotors.com | Phone: +91 88383 32117</p>
+    </div>
+  </footer>
+
+  <script>
+    // Responsive hamburger toggle + accessible attributes
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+      hamburger.setAttribute('aria-expanded', !expanded);
+      navMenu.classList.toggle('active');
+      navMenu.setAttribute('aria-hidden', expanded); // when expanded true => nav visible -> aria-hidden=false
+      hamburger.classList.toggle('open');
+    });
+
+    // Simple flip card: toggle rotate on keyboard focus/enter for accessibility
+    const rCard = document.querySelector('.r-card');
+    rCard?.addEventListener('click', () => rCard.classList.toggle('flipped'));
+    rCard?.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        rCard.classList.toggle('flipped');
+      }
+    });
+  </script>
+</body>
+
+</html>

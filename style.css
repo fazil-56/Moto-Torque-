@@ -1,0 +1,557 @@
+/* Reset & base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #0e0e0e;
+    --card: #1c1c1c;
+    --accent: #ff4500;
+    --muted: #ccccccbd;
+    --glass: rgba(255, 119, 0, 0.08);
+}
+
+body {
+    font-family: 'Urbanist', sans-serif;
+    background: var(--bg);
+    color: #fff;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* links */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* NAV */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 18px;
+    background: linear-gradient(90deg, #0b0b0b, #131313);
+    position: sticky;
+    top: 0;
+    z-index: 1100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.logo {
+    font-weight: 800;
+    color: var(--accent);
+    font-size: 1.45rem;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+/* hamburger button (three lines) */
+.hamburger {
+    display: none;
+    width: 40px;
+    height: 36px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    position: relative;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 3px;
+    margin: 5px 0;
+    transition: transform .35s ease, opacity .35s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* nav menu */
+.nav-menu {}
+
+.nav-menu ul {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: #fff;
+    padding: 6px 3px;
+    display: inline-block;
+    transition: color .18s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--accent);
+}
+
+/* HERO */
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 108px 18px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, .6), rgba(10, 10, 10, .6));
+}
+
+.hero-inner {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    flex: 1 1 420px;
+    text-align: left;
+    min-width: 260px;
+}
+
+.hero-content h1 {
+    font-size: 2.6rem;
+    margin-bottom: 12px;
+}
+
+.hero-content p {
+    color: var(--muted);
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #222;
+    color: #fff;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: transform .18s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* hero image */
+.hero-image {
+    flex: 0 1 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* sections */
+section {
+    padding: 60px 18px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* SERVICES: use grid so cards wrap nicely */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* service card */
+.service-card {
+    background: var(--card);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    transition: transform .35s ease, box-shadow .35s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+}
+
+.service-media {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: #0a0a0a;
+}
+
+.service-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .5s ease;
+}
+
+.service-card:hover .service-media img {
+    transform: scale(1.06);
+}
+
+.service-body {
+    padding: 16px;
+    color: var(--muted);
+}
+
+.service-body h3 {
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+
+/* SALES / Bikes grid */
+.bike-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bike-card {
+    background: var(--card);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform .28s ease, box-shadow .28s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+}
+
+.bike-card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    display: block;
+    transition: transform .45s ease;
+}
+
+.bike-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+}
+
+.bike-card:hover img {
+    transform: scale(1.04);
+}
+
+.bike-card figcaption {
+    padding: 14px;
+    color: var(--muted);
+}
+
+.bike-card h4 {
+    color: var(--accent);
+    margin-bottom: 6px;
+    font-size: 1.05rem;
+}
+
+/* ABOUT section */
+.aboutpg {
+    position: relative;
+    min-height: 420px;
+    padding: 108px 18px;
+    overflow: hidden;
+}
+
+/* .background-video { */
+    /* position:initial; */
+    /* right: 0; */
+    /* bottom: 0; */
+    /* width: 60%; */
+    /* max-width: 900px; */
+    /* opacity: .12; */
+    /* pointer-events: none; */
+/* } */
+
+.about-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.abt-con {
+    display: flex;
+    gap: 20px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.abt-box {
+    width: 380px;
+    background: transparent;
+    border-radius: 10px;
+    padding: 18px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 20px rgba(255, 119, 0, 0.07);
+    color: var(--muted);
+}
+
+.abt-box h3 {
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+
+/* REVIEWS */
+.review {
+    background: #0b0b0b;
+    padding: 50px 18px;
+}
+
+.review-list {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.review-card {
+    background: var(--card);
+    border-left: 5px solid var(--accent);
+    padding: 18px;
+    width: 340px;
+    border-radius: 8px;
+    color: var(--muted);
+}
+
+/* CONTACT / form flip card */
+.logincontainer {
+    display: flex;
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 36px 18px;
+    align-items: flex-start;
+}
+
+.contact-box-left {
+    flex: 1 1 420px;
+    color: var(--muted);
+}
+
+.vertical-line {
+    width: 2px;
+    background: rgba(255, 255, 255, 0.08);
+    height: 100%;
+    align-self: stretch;
+}
+
+.contact-box-right {
+    flex: 0 0 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 3D flip card */
+.contact-container {
+    perspective: 1000px;
+}
+
+.r-card {
+    width: 350px;
+    height: 320px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .8s ease;
+    cursor: pointer;
+}
+
+.r-card:focus {
+    outline: 2px solid rgba(255, 69, 0, 0.25);
+}
+
+.r-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+}
+
+.card-front {
+    background: #111;
+    color: var(--accent);
+}
+
+.card-back {
+    background: #111;
+    transform: rotateY(180deg);
+    color: var(--muted);
+    flex-direction: column;
+}
+
+.card-back form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+textarea,
+button[type="submit"] {
+    font-family: inherit;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    background: #222;
+    color: #fff;
+}
+
+button[type="submit"] {
+    background: var(--accent);
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.95;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #000;
+    color: #ccc;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1000px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-image {
+        flex-basis: 320px;
+    }
+
+    .about-box {
+        width: 320px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 260px;
+        transform: translateX(-110%);
+        background: linear-gradient(180deg, #0b0b0b, #161616);
+        box-shadow: 8px 0 40px rgba(0, 0, 0, 0.6);
+        padding-top: 60px;
+        z-index: 1200;
+        transition: transform .35s ease;
+    }
+
+    .nav-menu.active {
+        transform: translateX(0);
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 18px;
+        padding: 24px;
+    }
+
+    .hero-inner {
+        gap: 18px;
+    }
+
+    .logincontainer {
+        flex-direction: column;
+    }
+
+    .vertical-line {
+        display: none;
+    }
+
+    .contact-box-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .abt-con {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* smaller phones */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .service-grid {
+        gap: 14px;
+    }
+
+    .bike-grid {
+        gap: 12px;
+    }
+
+    .r-card {
+        width: 300px;
+        height: 300px;
+    }
+}
